@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.withUpdateInfoPlist = void 0;
-const config_plugins_1 = require("@expo/config-plugins");
-const withUpdateInfoPlist = (config, { photolibText, cameraText, microText } = {}) => {
+exports.updateInfoPlist = void 0;
+const config_plugins_1 = require("expo/config-plugins");
+const updateInfoPlist = (config, { photolibText, cameraText, microText } = {}) => {
     const photoDescription = photolibText || "Allow $(PRODUCT_NAME) to access your photo library";
     const CameraDescription = cameraText || "Allow $(PRODUCT_NAME) to access your camera";
     const MicrophoneDescription = microText || "Allow $(PRODUCT_NAME) to access your microphone";
@@ -13,5 +13,4 @@ const withUpdateInfoPlist = (config, { photolibText, cameraText, microText } = {
         return config;
     });
 };
-exports.withUpdateInfoPlist = withUpdateInfoPlist;
-exports.default = exports.withUpdateInfoPlist;
+exports.updateInfoPlist = updateInfoPlist;

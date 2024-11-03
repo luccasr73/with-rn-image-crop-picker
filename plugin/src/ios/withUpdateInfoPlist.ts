@@ -1,6 +1,6 @@
-import { ConfigPlugin, withInfoPlist } from "@expo/config-plugins";
+import { ConfigPlugin, withInfoPlist } from "expo/config-plugins";
 
-export const withUpdateInfoPlist: ConfigPlugin<{
+export const updateInfoPlist: ConfigPlugin<{
   photolibText?: string;
   cameraText?: string;
   microText?: string;
@@ -20,5 +20,3 @@ export const withUpdateInfoPlist: ConfigPlugin<{
     return config;
   });
 };
-
-export default withUpdateInfoPlist;

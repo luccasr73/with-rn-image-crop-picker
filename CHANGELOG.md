@@ -6,3 +6,6 @@
 
 - fix import at app.plugin.js
 
+## 0.1.5 — 2024-11-02
+
+- fix compatibility with expo 51

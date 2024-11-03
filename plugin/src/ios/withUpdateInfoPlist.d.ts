@@ -1,4 +1,4 @@
-import { ConfigPlugin } from "@expo/config-plugins";
+import { ConfigPlugin } from "expo/config-plugins";
 export declare const withUpdateInfoPlist: ConfigPlugin<{
     photolibText?: string;
     cameraText?: string;

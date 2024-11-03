@@ -1,10 +1,11 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.setBuildscript = exports.withUpdateProjectBuildGradle = void 0;
-const config_plugins_1 = require("@expo/config-plugins");
-const withUpdateProjectBuildGradle = (config) => {
+exports.setBuildscript = exports.addMavenRepositoriesOnProjectBuildGradle = void 0;
+const config_plugins_1 = require("expo/config-plugins");
+const addMavenRepositoriesOnProjectBuildGradle = (config) => {
     return (0, config_plugins_1.withProjectBuildGradle)(config, (config) => {
         if (config.modResults.language === "groovy") {
+            console.log(config.mods?.android?.projectBuildGradle);
             config.modResults.contents = setBuildscript(config.modResults.contents);
         }
         else {
@@ -13,7 +14,7 @@ const withUpdateProjectBuildGradle = (config) => {
         return config;
     });
 };
-exports.withUpdateProjectBuildGradle = withUpdateProjectBuildGradle;
+exports.addMavenRepositoriesOnProjectBuildGradle = addMavenRepositoriesOnProjectBuildGradle;
 function setBuildscript(buildGradle) {
     let newBuildGradle = buildGradle;
     if (!newBuildGradle.includes("maven { url 'https://maven.google.com' }")) {
@@ -29,4 +30,3 @@ function setBuildscript(buildGradle) {
     return newBuildGradle;
 }
 exports.setBuildscript = setBuildscript;
-exports.default = exports.withUpdateProjectBuildGradle;

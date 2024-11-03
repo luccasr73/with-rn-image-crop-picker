@@ -1,8 +1,8 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.setBuildscript = exports.withUpdateAppBuildGradle = void 0;
-const config_plugins_1 = require("@expo/config-plugins");
-const withUpdateAppBuildGradle = (config) => {
+exports.setBuildscript = exports.updateAppBuildGradle = void 0;
+const config_plugins_1 = require("expo/config-plugins");
+const updateAppBuildGradle = (config) => {
     return (0, config_plugins_1.withAppBuildGradle)(config, (config) => {
         if (config.modResults.language === "groovy") {
             config.modResults.contents = setBuildscript(config.modResults.contents);
@@ -13,7 +13,7 @@ const withUpdateAppBuildGradle = (config) => {
         return config;
     });
 };
-exports.withUpdateAppBuildGradle = withUpdateAppBuildGradle;
+exports.updateAppBuildGradle = updateAppBuildGradle;
 function setBuildscript(buildGradle) {
     let newBuildGradle = buildGradle;
     if (!newBuildGradle.includes("vectorDrawables.useSupportLibrary = true")) {
@@ -23,4 +23,3 @@ function setBuildscript(buildGradle) {
     return newBuildGradle;
 }
 exports.setBuildscript = setBuildscript;
-exports.default = exports.withUpdateAppBuildGradle;
