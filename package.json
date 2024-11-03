@@ -14,7 +14,7 @@
     "build": "npm_config_user_agent=yarn expo-module build plugin",
     "clean": "npm_config_user_agent=yarn expo-module clean plugin",
     "test": "npm_config_user_agent=yarn expo-module test plugin",
-    "prepare": "npm_config_user_agent=yarn expo-module prepare plugin",
+    "prepare": "npm run clean & npm run build",
     "prepublishOnly": "npm_config_user_agent=yarn expo-module prepublishOnly",
     "expo-module": "npm_config_user_agent=yarn expo-module"
   },
