@@ -1,7 +1,8 @@
 {
   "name": "@luccasr73/with-rn-image-crop-picker",
-  "version": "0.1.5-alpha.0",
+  "version": "0.1.5",
   "main": "app.plugin.js",
+  "types": "./plugin/build/index.d.ts",
   "homepage": "https://github.com/luccasr73/with-rn-image-crop-picker#readme",
   "repository": "https://github.com/luccasr73/with-rn-image-crop-picker.git",
   "description": "An Expo config plugin for painless setup of `react-native-image-crop-picker`",

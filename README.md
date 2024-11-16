@@ -4,7 +4,7 @@ Expo config plugin for [react-native-image-crop-picker](https://github.com/ivpus
 
 ## Why a fork?
 
-The original package(<https://github.com/mwegener-com/with-rn-image-crop-picker>) appears to no longer be actively maintained, so I forked it to make small updates
+The [original package](https://github.com/mwegener-com/with-rn-image-crop-picker) appears to no longer be actively maintained, so I forked it to make small updates and support new expo versions
 
 ## About
 
@@ -22,16 +22,18 @@ InfoPlist:
 
 AndroidManifest: `<uses-permission android:name="android.permission.CAMERA"/>`
 
-Project build.gradle:
-
-- `maven { url 'https://maven.google.com' }`
-- `maven { url "https://www.jitpack.io" }`
-
 App build.gradle `vectorDrawables.useSupportLibrary = true`
 
 ## Important note
 
 Currently there is no full support for front-camera on android.
+
+## Supported expo version
+
+| expo version | plugin version |
+| ------------ | -------------- |
+| 50.x.x       | 0.1.4          |
+| 51.x.x       | 0.1.5          |
 
 ## Usage
 

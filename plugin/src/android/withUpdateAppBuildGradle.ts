@@ -11,7 +11,7 @@ export const updateAppBuildGradle: ConfigPlugin = (config) => {
     } else {
       WarningAggregator.addWarningAndroid(
         "withImageCropPicker",
-        `Cannot automatically configure app build.gradle if it's not groovy`
+        `Cannot automatically configure app build.gradle if it's not groovy`,
       );
     }
     return config;

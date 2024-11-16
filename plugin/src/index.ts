@@ -6,7 +6,6 @@ import {
 
 import { addManifestPermissions } from "./android/withUpdateAndroidManifest";
 import { updateAppBuildGradle } from "./android/withUpdateAppBuildGradle";
-import { addMavenRepositoriesOnProjectBuildGradle } from "./android/withUpdateProjectBuildGradle";
 import { updateInfoPlist } from "./ios/withUpdateInfoPlist";
 
 const pkg = require("../../package.json");
@@ -22,7 +21,7 @@ const withImageCropPicker: ConfigPlugin<PluginProps> = (
     PhotoLibraryUsageDescription,
     CameraUsageDescription,
     MicrophoneUsageDescription,
-  } = {}
+  } = {},
 ) => {
   return withPlugins(config, [
     [
@@ -33,7 +32,6 @@ const withImageCropPicker: ConfigPlugin<PluginProps> = (
         microText: MicrophoneUsageDescription,
       },
     ],
-    addMavenRepositoriesOnProjectBuildGradle,
     updateAppBuildGradle,
     addManifestPermissions,
   ]);

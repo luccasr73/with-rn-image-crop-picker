@@ -12,11 +12,11 @@ export const addManifestPermissions: ConfigPlugin = (config) => {
 };
 
 async function setCustomConfigAsync(
-  androidManifest: AndroidConfig.Manifest.AndroidManifest
+  androidManifest: AndroidConfig.Manifest.AndroidManifest,
 ) {
   AndroidConfig.Permissions.ensurePermission(
     androidManifest,
-    "android.permission.CAMERA"
+    "android.permission.CAMERA",
   );
 
   return androidManifest;
